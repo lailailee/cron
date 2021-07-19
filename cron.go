@@ -40,8 +40,6 @@ func (c *Cron) listenTime() {
 			{
 				for _, plan := range c.planList {
 					b := checkTime(plan.timeTick)
-					// fmt.Print("checkTime:")
-					// fmt.Println(b)
 					if b {
 						plan.function()
 					}
@@ -59,7 +57,6 @@ func getCurrentTime() (current []int) {
 
 func checkTime(timeTick [][]int) (b bool) {
 	current := getCurrentTime()
-	// fmt.Println(current)
 	b = true
 	for i, v := range current {
 		if len(timeTick[i]) != 0 && !contain(timeTick[i], v) {
