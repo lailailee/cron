@@ -14,11 +14,13 @@ type Plan struct {
 	function func()
 }
 
+// New 新建Cron对象
 func New() Cron {
 	var cron Cron
 	return cron
 }
 
+// AddFunc 添加监听事件
 func (c *Cron) AddFunc(set string, function func()) {
 	timeTick := parseParameter(set)
 	plan := Plan{
@@ -28,6 +30,7 @@ func (c *Cron) AddFunc(set string, function func()) {
 	c.planList = append(c.planList, plan)
 }
 
+// Start 开始监听
 func (c *Cron) Start() {
 	c.listenTime()
 }
