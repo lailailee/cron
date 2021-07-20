@@ -7,7 +7,15 @@ import (
 )
 
 func TestCron(t *testing.T) {
-	msg := "15,20,30,45 * * 20 * *"
+	msg := "5,10,11,15,20,30,45,55,58 * * 20 * 2022"
+	c := New()
+	c.AddFunc(msg, func() {
+		fmt.Println(time.Now())
+	})
+	c.Start()
+}
+func TestCron2(t *testing.T) {
+	msg := "5,10,11,15,20,30,45,55,58"
 	c := New()
 	c.AddFunc(msg, func() {
 		fmt.Println(time.Now())

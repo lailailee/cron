@@ -62,7 +62,7 @@ func checkTime(timeTick [][]int) (b bool) {
 	current := getCurrentTime()
 	b = true
 	for i, v := range current {
-		if len(timeTick[i]) != 0 && !contain(timeTick[i], v) {
+		if len(timeTick) > i && len(timeTick[i]) != 0 && !contain(timeTick[i], v) {
 			b = false
 			break
 		}
