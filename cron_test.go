@@ -13,6 +13,7 @@ func TestCron(t *testing.T) {
 		fmt.Println(time.Now())
 	})
 	c.Start()
+	fmt.Println(":LLLL")
 }
 func TestCron2(t *testing.T) {
 	msg := "5,10,11,15,20,30,45,55,58"

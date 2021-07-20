@@ -32,7 +32,7 @@ func (c *Cron) AddFunc(set string, function func()) {
 
 // Start 开始监听
 func (c *Cron) Start() {
-	c.listenTime()
+	go c.listenTime()
 }
 
 func (c *Cron) listenTime() {
