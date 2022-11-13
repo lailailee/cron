@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 )
-
+// TestCron
 func TestCron(t *testing.T) {
 	msg := "5,10,11,15,20,30,45,55,58 * * 20 * 2022"
 	c := New()
@@ -15,6 +15,7 @@ func TestCron(t *testing.T) {
 	c.Start()
 	fmt.Println(":LLLL")
 }
+// TestCron2
 func TestCron2(t *testing.T) {
 	msg := "5,10,11,15,20,30,45,55,58"
 	c := New()
@@ -23,6 +24,7 @@ func TestCron2(t *testing.T) {
 	})
 	c.Start()
 }
+// TestCron3
 func TestCron3(t *testing.T) {
 	msg := "30 56"
 	c := New()
