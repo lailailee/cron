@@ -101,6 +101,7 @@ func parseParameter(parameter string) [][]int {
 	}
 	return timeTick
 }
+
 func reInt(m []string) (ir []int) {
 	ir = []int{}
 	if len(m) == 0 {

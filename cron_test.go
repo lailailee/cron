@@ -23,6 +23,16 @@ func TestCron2(t *testing.T) {
 	})
 	c.Start()
 }
+func TestCron3(t *testing.T) {
+	msg := "30 56"
+	c := New()
+	c.AddFunc(msg, func() {
+		fmt.Println(time.Now())
+	})
+	c.Start()
+	fmt.Println(":LLLL")
+	select {}
+}
 
 // === RUN   TestCron
 // 2021-07-20 00:31:15.772749 +0800 CST m=+21.002984191
